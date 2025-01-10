@@ -1,0 +1,170 @@
+
+.mulish-title {
+    font-family: "Mulish", serif; 
+    font-optical-sizing: auto; 
+    font-weight: 700; 
+    font-style: normal; 
+}
+  
+.mulish-body {
+    font-family: "Mulish", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Mulish", Helvetica, sans-serif;
+}
+/* color lavanda #C7B4E4 */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background: #C7B4E4;
+    padding: 10px 20px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+header p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+
+.header-logo {
+    flex: 1; /* Toma 1 parte del espacio disponible */
+    max-width: 14%; 
+    padding: 0px;
+}
+
+.logosoham {
+    width: 100%; /* Asegura que el logo se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción del logo */
+    object-fit: contain; /* Ajusta el logo sin distorsión */
+}
+
+.header-nav {
+    flex: 2; /* Toma 2 partes del espacio disponible */
+    max-width: 86%; /* Limita el ancho al 75% */
+    padding-left: 20px;
+}
+
+nav{
+    padding: 0px 0;
+    border-radius: 0px;
+    margin: 0;
+}
+
+.header-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav ul li a{
+    font-size: 18px;
+    color: rgb(255, 251, 236);
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.header-nav ul li a:hover {
+    color: #472E87;
+    text-decoration: none;
+}
+
+main {
+    position: relative; /* Permite colocar elementos superpuestos */
+    width: 100%;
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Oculta cualquier parte que sobresalga */
+    display: flex; /* Flexbox para alinear contenido */
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.bg-video {
+    position: absolute; /* Ubica el video en relación al contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el área sin deformarse */
+    z-index: -1; /* Envía el video al fondo */
+}
+
+/* Contenedor principal del texto */
+.main-text {
+    text-align: center; /* Centra el texto */
+    color: white; /* Hace el texto visible sobre el video */
+    z-index: 1; /* Asegura que el texto esté por encima del video */
+}
+
+/* Título principal */
+.main-title {
+    font-family: "Mulish", serif; /* Fuente para el título */
+    font-size: 3rem; /* Tamaño grande del título */
+    font-weight: 300; /* Peso del texto */
+    margin: 0;
+    color:white;
+}
+
+.main-title span {
+    font-family: "Mulish", sans-serif; /* Cambia a una fuente diferente */
+    font-weight: 700; /* Peso más ligero para contraste */
+    color: #CDAC39; /* Color diferente para destacar */
+}
+
+/* Subtítulo */
+.main-subtitle {
+    font-family: "Mulish", sans-serif; /* Fuente para el subtítulo */
+    font-size: 1.5rem; /* Tamaño del subtítulo */
+    font-weight: 400;
+    margin-top: 10px;
+    color:white;
+}
+
+/* Media Query: Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .header-logo {
+        max-width: 25%; /* Cambia el logo a ocupar el 25% del ancho */
+    }
+    .header-nav {
+        max-width: 75%; /* Cambia el navegador a ocupar el 75% del ancho */
+    }
+
+    .header-nav ul {
+        justify-content: center; /* Centra las pestañas en pantallas pequeñas */
+        gap: 10px; /* Reduce el espacio entre pestañas */
+    }
+
+    .header-nav ul li a{
+        font-size: 14px;
+        color: rgb(255, 251, 236);
+        cursor: pointer;
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: color 0.3s;
+    }
+
+    .main-title {
+        text-align: center; /* Centra el texto */
+        font-size: 2rem; /* Opcional: ajusta el tamaño para pantallas pequeñas */
+    }
+}
